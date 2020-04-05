@@ -1,0 +1,10 @@
+.second-layer {
+    position:relative;
+    width: 100%;
+    height:100vh;
+ }
+
+.second-layer-bottom {
+    position:absolute;
+    bottom:0;
+}
