@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1d1c7b9-1ead-413c-99ff-9f37daff273f" name="Default Changelist" comment="" />
+    <list default="true" id="a1d1c7b9-1ead-413c-99ff-9f37daff273f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Buttons/BorderButton/borderButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layers/firstLayer/1v2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layers/firstLayer/firstLayer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/firstLayer/firstLayer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layers/firstLayer/firstLayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layers/firstLayer/firstLayer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +26,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZvvK8CWFGTzdrba91iy4HV2iFh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,6 +40,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -39,6 +57,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ilied\Documents\projects\adelina_horia\src\Buttons\BordderButton" />
       <recent name="C:\Users\ilied\Documents\projects\adelina_horia\src\layers\firstLayer" />
     </key>
   </component>
@@ -60,6 +79,7 @@
       <workItem from="1585912542275" duration="289000" />
       <workItem from="1586108060356" duration="47000" />
       <workItem from="1586108421479" duration="109000" />
+      <workItem from="1586181106020" duration="15982000" />
     </task>
     <servers />
   </component>
@@ -71,14 +91,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1585732376614" />
-    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585732873306">
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586191534068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585732873306" />
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586191534068" />
     <state x="740" y="267" key="FileChooserDialogImpl" timestamp="1586108527204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586108527204" />
+    <state x="714" y="243" key="RollbackChangesDialog" timestamp="1586110967059">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="714" y="243" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586110967059" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1586108531653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
