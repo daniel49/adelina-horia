@@ -31,10 +31,10 @@ function FirstLayer(props) {
                         }}
                         onInit={(typewriter) => {
                             typewriter
-                                .pauseFor(1000).typeString('Hey').pauseFor(600).typeString('<br>Bine ai venit').pauseFor(1000).deleteChars(21)
-                                .pauseFor(500).typeString('Cu siguranta stii de ce te afli aici').pauseFor(600).typeString('<br>Soseste,').pauseFor(300)
-                                .typeString(' <strong><span style="color: #27ae60;">in curand</span></strong>,').pauseFor(300).typeString(' momentul cel mare')
-                                .pauseFor(600).deleteChars(4).pauseFor(600).typeString('<strong><span style="color: #d24c8d;">magic</span></strong>').pauseFor(600)
+                                // .pauseFor(1000).typeString('Hey').pauseFor(600).typeString('<br>Bine ai venit').pauseFor(1000).deleteChars(21)
+                                // .pauseFor(500).typeString('Cu siguranta stii de ce te afli aici').pauseFor(600).typeString('<br>Soseste,').pauseFor(300)
+                                // .typeString(' <strong><span style="color: #396d63;">in curand</span></strong>,').pauseFor(300).typeString(' momentul cel mare')
+                                // .pauseFor(600).deleteChars(4).pauseFor(600).typeString('<strong><span style="color: #d24c8d;">magic</span></strong>').pauseFor(600)
                                 .typeString("<br>Urmeaza-ma")
                                 .pauseFor(500)
                                 .callFunction((a,b) => {
