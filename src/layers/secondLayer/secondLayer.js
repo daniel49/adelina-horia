@@ -10,6 +10,8 @@ class SecondLayer extends React.Component {
 
         return (
             <div className={"second-layer"}>
+                <div className={"second-layer-top-floral"} />
+                <div className={"second-layer-bottom-floral"} />
                 <div className={"second-layer-bottom"} ref={secondLayerRef}/>
             </div>
         );

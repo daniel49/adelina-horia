@@ -9,3 +9,27 @@
     position:absolute;
     bottom:0;
 }
+
+.second-layer-top-floral {
+    z-index:1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("./2_top.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 409px;
+    width:629px;
+}
+
+.second-layer-bottom-floral {
+    z-index:2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url("./2_btm.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 409px;
+    width:629px;
+}
