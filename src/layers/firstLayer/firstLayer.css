@@ -18,20 +18,21 @@
 }
 
 .first-layer-text-intro {
-    color:#f0f7f0;
-    font-size: 3rem;
+    color: #6a6c6a;
+    font-weight: bold;
+    font-size: 5rem;
     line-height: 120%;
-    font-family: 'Merienda', cursive;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .first-layer-button-intro svg {
-    color: #396d63 !important;
+    color: #b772a1 !important;
     width: 2em !important;
     height: 2em !important;
 }
 
 .first-layer-button-intro svg:hover {
-    color: #98b3a6 !important;
+    color: deeppink !important;
 }
 
 

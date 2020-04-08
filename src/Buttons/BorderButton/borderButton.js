@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     imageMarked: {
         height: 2,
         width: 18,
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: '#d24c8d',
         position: 'absolute',
         bottom: -2,
         left: 'calc(50% - 9px)',

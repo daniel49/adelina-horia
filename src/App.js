@@ -1,6 +1,7 @@
 import React from 'react';
 import FirstLayer from './layers/firstLayer/firstLayer';
 import SecondLayer from './layers/secondLayer/secondLayer';
+import ThirdLayer from './layers/thirdLayer/thirdLayer';
 
 
 export const scrollTo = (ref) => {
@@ -16,6 +17,7 @@ function App() {
         <div>
             <FirstLayer secondLayerRef={secondLayerRef} />
             <SecondLayer secondLayerRef={secondLayerRef} />
+            <ThirdLayer />
         </div>
     );
 }
