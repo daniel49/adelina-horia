@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: theme.palette.common.white,
+        color: '#6a6c6a',
     },
     imageTitle: {
         position: 'relative',

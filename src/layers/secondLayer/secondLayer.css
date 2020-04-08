@@ -12,12 +12,14 @@
 
 .second-layer-top-floral img {
     position:absolute;
+    opacity: 0.2;
 }
 
 .second-layer-bottom-floral img {
     position: absolute;
     bottom: 0;
     right: 0;
+    opacity: 0.2;
 }
 
 /*.second-layer-top-floral {*/
