@@ -2,5 +2,6 @@
     position:relative;
     width: 100%;
     height:100vh;
-    background-color: #f3ebe9;
+    background-color: #d09dc2;
+    border-top: 8px solid white;
 }

@@ -18,15 +18,15 @@
 }
 
 .first-layer-text-intro {
-    color: #6a6c6a;
+    color: #f5ebeb;
     font-weight: bold;
     font-size: 3.5rem;
     line-height: 120%;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Ruluko', sans-serif;
 }
 
 .first-layer-button-intro svg {
-    color: #b772a1 !important;
+    color: #902c68 !important;
     width: 2em !important;
     height: 2em !important;
 }

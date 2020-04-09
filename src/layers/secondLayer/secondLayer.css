@@ -2,7 +2,8 @@
     position:relative;
     width: 100%;
     height:100vh;
-    background-color: #fbfdfa;
+    background-color: #f5ebeb;
+    border-top: 8px solid white;
  }
 
 .second-layer-bottom {
