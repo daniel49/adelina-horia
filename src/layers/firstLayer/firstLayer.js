@@ -6,13 +6,13 @@ import BorderButton from "../../Buttons/BorderButton/borderButton";
 
 import './firstLayer.css';
 
-import I_o from './1_o.JPG';
-import I1_ls_4pe3 from './1_ls_4pe3.jpg';
-import I1_ls_16pe9 from './1_ls_16pe9.jpg';
+import I_o from './1_o.jpeg';
+import I1_ls_4pe3 from './1_ls_4pe3.jpeg';
+import I1_ls_16pe9 from './1_ls_16pe9.jpeg';
 
-import I1_pt_5pe9 from './1_pt_5pe9.jpg';
-import I1_pt_4pe3 from './1_pt_4pe3.jpg';
-import I1_pt_3pe2 from './1_pt_3pe2.jpg';
+import I1_pt_5pe9 from './1_pt_5pe9.jpeg';
+import I1_pt_4pe3 from './1_pt_4pe3.jpeg';
+import I1_pt_3pe2 from './1_pt_3pe2.jpeg';
 
 
 

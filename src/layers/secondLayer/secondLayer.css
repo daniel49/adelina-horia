@@ -3,7 +3,7 @@
     width: 100%;
     height:100vh;
     background-color: #f5ebeb;
-    border-top: 8px solid white;
+    border-top: 8px solid #396d63;
  }
 
 .second-layer-bottom {
@@ -23,24 +23,65 @@
     opacity: 0.2;
 }
 
-/*.second-layer-top-floral {*/
-/*    z-index:1;*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: contain;*/
-/*    width: 100%;*/
-/*    height: 50%;*/
-/*}*/
+.second-layer-content {
+    position: relative;
+    width: 100%;
+}
 
-/*.second-layer-bottom-floral {*/
-/*    z-index:2;*/
-/*    position: absolute;*/
-/*    bottom: 0;*/
-/*    right: 0;*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: contain;*/
-/*    width: 100%;*/
-/*    height: 50%;*/
-/*}*/
+.second-layer-text-intro {
+    position:relative;
+    color: white;
+    text-align: center;
+    padding-top:5%;
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 120%;
+    font-family: 'Satisfy', cursive;
+}
+
+.second-layer-left {
+    display:inline-block;
+    width:50%;
+    margin: 5% auto;
+}
+
+.second-layer-right {
+    display:inline-block;
+    width:50%;
+    /*padding: 5%;*/
+    margin: 5% auto;
+}
+
+.second-layer-center {
+    position: absolute;
+    display:inline-block;
+    bottom: 0;
+
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 120%;
+    font-family: 'Satisfy', cursive;
+}
+
+.second-layer-left-intro {
+    position:relative;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 120%;
+    font-family: 'Satisfy', cursive;
+}
+
+
+.second-layer-right-intro {
+    position:relative;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 120%;
+    font-family: 'Satisfy', cursive;
+}
