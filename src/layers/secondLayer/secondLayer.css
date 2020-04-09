@@ -1,7 +1,8 @@
 .second-layer {
     position:relative;
     width: 100%;
-    height:100vh;
+    min-height:100%;
+    height: 100vh;
     background-color: #f5ebeb;
     border-top: 8px solid #396d63;
  }
@@ -26,6 +27,7 @@
 .second-layer-content {
     position: relative;
     width: 100%;
+    height: 100%;
 }
 
 .second-layer-text-intro {
@@ -55,7 +57,7 @@
 .second-layer-center {
     position: absolute;
     display:inline-block;
-    bottom: 0;
+    top:50%;
 
     color: white;
     text-align: center;
@@ -82,6 +84,25 @@
     text-align: center;
     font-weight: bold;
     font-size: 2rem;
+    line-height: 120%;
+    font-family: 'Satisfy', cursive;
+}
+
+.second-layer-left-photo {
+    width:15vw;
+}
+
+.second-layer-right-photo {
+    width: 15vw;
+}
+
+.second-layer-text-extra1 {
+    position:relative;
+    color: #902c68 ;
+    text-align: center;
+    padding-top:1%;
+    font-weight: bold;
+    font-size: 4rem;
     line-height: 120%;
     font-family: 'Satisfy', cursive;
 }
