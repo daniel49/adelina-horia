@@ -2,6 +2,7 @@ import React from 'react';
 import {fadeInLeft, fadeInRight} from 'react-animations';
 import Typewriter from "typewriter-effect";
 import styled, {keyframes} from "styled-components";
+import Grid from '@material-ui/core/Grid'
 
 import './secondLayer.css';
 
@@ -10,8 +11,10 @@ import I2_top_sm from './2_top.png';
 import I2_btm_md from './2_btm_lg.png';
 import I2_btm_sm from './2_btm.png';
 
-import I2_left from "../secondLayer/2_left.jpeg";
-import I2_right from "../secondLayer/2_right.jpeg";
+import I2_left from "../secondLayer/22_left.jpeg";
+import I2_right from "../secondLayer/22_right.jpeg";
+import GoDownIcon from "@material-ui/icons/PlayForWork";
+import BorderButton from "../../Buttons/BorderButton/borderButton";
 
 
 
@@ -22,7 +25,7 @@ class SecondLayer extends React.Component {
 
         this.state = {
             showLeftImage: false,
-            showRightImage: false
+            showRightImage: false,
         }
     }
 
@@ -38,20 +41,20 @@ class SecondLayer extends React.Component {
                 {
                     this.props.isScrolledHere &&
                         <div>
-                            {/*<div className={"second-layer-top-floral"}>*/}
-                            {/*    <picture>*/}
-                            {/*        <source media="(max-width: 1500px)" srcSet={I2_top_sm} />*/}
-                            {/*        <source media="(min-width: 1500px)" srcSet={I2_top_md} />*/}
-                            {/*        <img src={I2_top_sm} alt={"Not found"} />*/}
-                            {/*    </picture>*/}
-                            {/*</div>*/}
-                            {/*<div className={"second-layer-bottom-floral"}>*/}
-                            {/*    <picture>*/}
-                            {/*        <source media="(min-width: 1500px)" srcSet={I2_btm_md}/>*/}
-                            {/*        <source media="(max-width: 1500px)" srcSet={I2_btm_sm}/>*/}
-                            {/*        <img src={I2_btm_sm} alt={"Not found"}/>*/}
-                            {/*    </picture>*/}
-                            {/*</div>*/}
+                            <div className={"second-layer-top-floral"}>
+                                <picture>
+                                    <source media="(max-width: 1500px)" srcSet={I2_top_sm} />
+                                    <source media="(min-width: 1500px)" srcSet={I2_top_md} />
+                                    <img src={I2_top_sm} alt={"Not found"} />
+                                </picture>
+                            </div>
+                            <div className={"second-layer-bottom-floral"}>
+                                <picture>
+                                    <source media="(min-width: 1500px)" srcSet={I2_btm_md}/>
+                                    <source media="(max-width: 1500px)" srcSet={I2_btm_sm}/>
+                                    <img src={I2_btm_sm} alt={"Not found"}/>
+                                </picture>
+                            </div>
                             <div className={"second-layer-content"}>
                                 <div className={"second-layer-text-intro"}>
                                     <Typewriter
@@ -70,61 +73,66 @@ class SecondLayer extends React.Component {
                                         }}
                                     />
                                 </div>
-                                <div className={"second-layer-left"}>
-                                    <div className={"second-layer-left-intro"}>
-                                        <Typewriter
-                                            options={{
-                                                delay: 75,
-                                            }}
-                                            onInit={(typewriter) => {
-                                                typewriter
-                                                    .pauseFor(2000)
-                                                    .typeString(' <strong><span style="color: #396d63;">Dra.</span></strong>')
-                                                    .typeString(' <strong><span style="color: #902c68;"> Adelina</span></strong>')
-                                                    .pauseFor(500)
-                                                    .callFunction((a,b) => {
-                                                        document.querySelector(".second-layer-left-intro .Typewriter__cursor").innerHTML = "";
-                                                        this.setState({showLeftImage: true});
-                                                    })
-                                                    .start();
-                                            }}
-                                        />
-                                    </div>
-                                    {
-                                        (this.state.showLeftImage && this.state.showRightImage) &&
+                                <Grid container  className={"second-layer-content-photos"}>
+                                    <Grid item lg={5} xs={12} className={"second-layer-left"}>
+                                        <div className={"second-layer-left-intro"}>
+                                            <Typewriter
+                                                options={{
+                                                    delay: 75,
+                                                }}
+                                                onInit={(typewriter) => {
+                                                    typewriter
+                                                        .pauseFor(2000)
+                                                        .typeString(' <strong><span style="color: #396d63;">Dra.</span></strong>')
+                                                        .typeString(' <strong><span style="color: #902c68;"> Adelina</span></strong>')
+                                                        .pauseFor(500)
+                                                        .callFunction((a,b) => {
+                                                            document.querySelector(".second-layer-left-intro .Typewriter__cursor").innerHTML = "";
+                                                            this.setState({showLeftImage: true});
+                                                        })
+                                                        .start();
+                                                }}
+                                            />
+                                        </div>
+                                        {
+                                            (this.state.showLeftImage && this.state.showRightImage) &&
                                             <LeftImageAnimation>
                                                 <img className={"second-layer-left-photo"} src={I2_left} alt={"Not found"} />
                                             </LeftImageAnimation>
-                                    }
-                                </div>
-                                <div className={"second-layer-center"}>si</div>
-                                <div className={"second-layer-right"}>
-                                    <div className={"second-layer-right-intro"}>
-                                        <Typewriter
-                                            options={{
-                                                delay: 75,
-                                            }}
-                                            onInit={(typewriter) => {
-                                                typewriter
-                                                    .pauseFor(2000)
-                                                    .typeString(' <strong><span style="color: #396d63;">Dl.</span></strong>')
-                                                    .typeString(' <strong><span style="color: #902c68;"> Horia</span></strong>')
-                                                    .pauseFor(500)
-                                                    .callFunction((a,b) => {
-                                                        document.querySelector(".second-layer-right-intro .Typewriter__cursor").innerHTML = "";
-                                                        this.setState({showRightImage: true});
-                                                    })
-                                                    .start();
-                                            }}
-                                        />
-                                    </div>
-                                    {
-                                        (this.state.showLeftImage && this.state.showRightImage) &&
+                                        }
+                                    </Grid>
+                                    <Grid item lg={2} xs={12} className={"second-layer-center"}>
+                                        &
+                                    </Grid>
+                                    <Grid item lg={5} xs={12} className={"second-layer-right"}>
+                                        <div className={"second-layer-right-intro"}>
+                                            <Typewriter
+                                                options={{
+                                                    delay: 75,
+                                                }}
+                                                onInit={(typewriter) => {
+                                                    typewriter
+                                                        .pauseFor(2000)
+                                                        .typeString(' <strong><span style="color: #396d63;">Dl.</span></strong>')
+                                                        .typeString(' <strong><span style="color: #902c68;"> Horia</span></strong>')
+                                                        .pauseFor(500)
+                                                        .callFunction((a,b) => {
+                                                            document.querySelector(".second-layer-right-intro .Typewriter__cursor").innerHTML = "";
+                                                            this.setState({showRightImage: true});
+                                                        })
+                                                        .start();
+                                                }}
+                                            />
+                                        </div>
+                                        {
+                                            (this.state.showLeftImage && this.state.showRightImage) &&
                                             <RightImageAnimation>
                                                 <img className={"second-layer-right-photo"} src={I2_right} alt={"Not found"} />
                                             </RightImageAnimation>
-                                    }
-                                </div>
+                                        }
+                                    </Grid>
+                                </Grid>
+
                                 {
                                     (this.state.showLeftImage && this.state.showRightImage) &&
                                         <div className={"second-layer-text-extra1"}>
@@ -145,7 +153,12 @@ class SecondLayer extends React.Component {
                                             />
                                         </div>
                                 }
-
+                                {
+                                    (this.state.showLeftImage && this.state.showRightImage) &&
+                                    <div style={{textAlign: "center"}}>
+                                        <BorderButton className={"second-layer-button-navigation"} onClick={this.props.onNavigateClick} content={<GoDownIcon/>} animate={true}/>
+                                    </div>
+                                }
                             </div>
                         </div>
                 }

@@ -2,7 +2,6 @@
     position:relative;
     width: 100%;
     min-height:100vh;
-    height: 100vh;
     background-color: #f5ebeb;
     border-top: 8px solid #396d63;
  }
@@ -15,6 +14,7 @@
 .second-layer-top-floral img {
     position:absolute;
     opacity: 0.2;
+    max-width: 100%;
 }
 
 .second-layer-bottom-floral img {
@@ -22,6 +22,7 @@
     bottom: 0;
     right: 0;
     opacity: 0.2;
+    max-width: 100%;
 }
 
 .second-layer-content {
@@ -30,41 +31,42 @@
     height: 100%;
 }
 
+.second-layer-content-photos {
+    margin: 3% 0 3% 0;
+}
+
 .second-layer-text-intro {
     position:relative;
     color: white;
     text-align: center;
-    padding-top:5%;
     font-weight: bold;
     font-size: 3.5rem;
     line-height: 120%;
     font-family: 'Satisfy', cursive;
 }
 
-.second-layer-left {
-    display:inline-block;
-    width:50%;
-    margin: 5% auto;
-}
+/*.second-layer-left {*/
+/*    display:inline-block;*/
+/*    width:50%;*/
+/*    margin: 5% auto;*/
+/*}*/
 
-.second-layer-right {
-    display:inline-block;
-    width:50%;
-    /*padding: 5%;*/
-    margin: 5% auto;
-}
+/*.second-layer-right {*/
+/*    display:inline-block;*/
+/*    width:50%;*/
+/*    !*padding: 5%;*!*/
+/*    margin: 5% auto;*/
+/*}*/
 
 .second-layer-center {
-    position: absolute;
-    display:inline-block;
-    top:50%;
-
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 3rem;
     line-height: 120%;
     font-family: 'Satisfy', cursive;
+    margin: auto !important;
+    padding: 0.5rem;
 }
 
 .second-layer-left-intro {
@@ -88,12 +90,32 @@
     font-family: 'Satisfy', cursive;
 }
 
-.second-layer-left-photo {
-    width:15vw;
+@media (orientation: portrait) {
+    .second-layer-left-photo {
+        width:55vw;
+    }
+
+    .second-layer-right-photo {
+        width: 55vw;
+    }
+
+    .second-layer-text-intro {
+        padding-top: 5%;
+    }
 }
 
-.second-layer-right-photo {
-    width: 15vw;
+@media (orientation: landscape) {
+    .second-layer-left-photo {
+        width:20vw;
+    }
+
+    .second-layer-right-photo {
+        width: 20vw;
+    }
+
+    .second-layer-text-intro {
+        padding-top: 5%;
+    }
 }
 
 .second-layer-text-extra1 {
@@ -105,4 +127,14 @@
     font-size: 4rem;
     line-height: 120%;
     font-family: 'Satisfy', cursive;
+}
+
+.second-layer-button-navigation svg {
+    color: #902c68 !important;
+    width: 2em !important;
+    height: 2em !important;
+}
+
+.second-layer-button-navigation svg:hover {
+    color: deeppink !important;
 }
