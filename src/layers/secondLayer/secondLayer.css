@@ -1,7 +1,7 @@
 .second-layer {
     position:relative;
     width: 100%;
-    min-height:100%;
+    min-height:100vh;
     height: 100vh;
     background-color: #f5ebeb;
     border-top: 8px solid #396d63;
