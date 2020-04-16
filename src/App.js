@@ -5,7 +5,7 @@ import SecondLayer from './layers/secondLayer/secondLayer';
 import ThirdLayer from './layers/thirdLayer/thirdLayer';
 
 
-export const scrollTo = (ref, position) => {
+export const scrollTo = (position) => {
     window.scrollTo(0, position)
 };
 
@@ -18,36 +18,35 @@ class App extends React.Component {
         this.state = {
             isOnSecondLayer: false
         };
-
-        this.secondLayerBottomRef = React.createRef();
-        this.thirdLayerBottomRef = React.createRef();
     }
 
     navigateToSecondLayer = () => {
         let bodyRect = document.body.getBoundingClientRect();
+        let elemRect = document.getElementsByClassName("second-layer")[0].getBoundingClientRect();
+        let offset = elemRect.top - bodyRect.top;
 
-        let  elemRect = document.getElementsByClassName("second-layer")[0].getBoundingClientRect();
-        let    offset   = elemRect.top - bodyRect.top;
-        this.setState({isOnSecondLayer: true})
-        scrollTo(this.secondLayerBottomRef, offset);
+        this.setState({isOnSecondLayer: true});
+        scrollTo(offset);
     };
 
     navigatedToSecondLayer = () => {
-        this.setState({isOnSecondLayer: true})
+        if (!this.state.isOnSecondLayer) {
+            this.setState({isOnSecondLayer: true})
+        }
     };
 
     navigateToThirdLayer = () => {
         let bodyRect = document.body.getBoundingClientRect();
-            let  elemRect = document.getElementsByClassName("third-layer")[0].getBoundingClientRect();
-            let    offset   = elemRect.top - bodyRect.top;
-        scrollTo(this.thirdLayerBottomRef, offset);
+        let elemRect = document.getElementsByClassName("third-layer")[0].getBoundingClientRect();
+        let offset = elemRect.top - bodyRect.top;
+
+        scrollTo(offset);
     };
 
     render() {
 
         const SecondLayerWithRef = React.forwardRef((props, ref) => {
             return <SecondLayer {...props} innerRef={ref}
-                                secondLayerBottomRef={this.secondLayerBottomRef}
                                 isScrolledHere={this.state.isOnSecondLayer}
                                 onNavigateClick={this.navigateToThirdLayer}
 
@@ -61,7 +60,7 @@ class App extends React.Component {
                 <Waypoint onEnter={this.navigatedToSecondLayer}>
                     <SecondLayerWithRef />
                 </Waypoint>
-                <ThirdLayer thirdLayerBottomRef={this.thirdLayerBottomRef}/>
+                <ThirdLayer />
             </div>
         );
     }

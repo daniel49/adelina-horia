@@ -31,8 +31,6 @@ class SecondLayer extends React.Component {
 
 
     render() {
-        const {secondLayerBottomRef} = this.props;
-
         const LeftImageAnimation = styled.div`text-align: center; animation: 2s ${keyframes`${fadeInLeft}`}`;
         const RightImageAnimation = styled.div`text-align: center; animation: 2s ${keyframes`${fadeInRight}`}`;
 
@@ -143,10 +141,11 @@ class SecondLayer extends React.Component {
                                                 onInit={(typewriter) => {
                                                     typewriter
                                                         .pauseFor(1000)
-                                                        .typeString("Se casatoresc!")
+                                                        .typeString("Se casatoresc!!!")
                                                         .pauseFor(500)
                                                         .callFunction((a,b) => {
                                                             document.querySelector(".second-layer-text-extra1 .Typewriter__cursor").innerHTML = "";
+                                                            document.querySelector(".second-layer-text-extra1 span").style.borderBottom="6px solid #902c68";
                                                         })
                                                         .start();
                                                 }}
@@ -162,7 +161,6 @@ class SecondLayer extends React.Component {
                             </div>
                         </div>
                 }
-                <div className={"second-layer-bottom"} ref={secondLayerBottomRef}/>
             </div>
         );
     }

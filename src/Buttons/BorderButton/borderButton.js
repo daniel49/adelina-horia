@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: '#f5ebeb',
+        color: 'white',
     },
     imageTitle: {
         position: 'relative',
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     imageMarked: {
         height: 2,
         width: 18,
-        backgroundColor: '#f5ebeb',
+        backgroundColor: 'white',
         position: 'absolute',
         bottom: -2,
         left: 'calc(50% - 9px)',

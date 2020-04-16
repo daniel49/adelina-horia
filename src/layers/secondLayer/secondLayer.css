@@ -6,11 +6,6 @@
     border-top: 8px solid #396d63;
  }
 
-.second-layer-bottom {
-    position:absolute;
-    bottom:0;
-}
-
 .second-layer-top-floral img {
     position:absolute;
     opacity: 0.2;
@@ -37,7 +32,7 @@
 
 .second-layer-text-intro {
     position:relative;
-    color: white;
+    color: #396d63;
     text-align: center;
     font-weight: bold;
     font-size: 3.5rem;
@@ -45,21 +40,8 @@
     font-family: 'Satisfy', cursive;
 }
 
-/*.second-layer-left {*/
-/*    display:inline-block;*/
-/*    width:50%;*/
-/*    margin: 5% auto;*/
-/*}*/
-
-/*.second-layer-right {*/
-/*    display:inline-block;*/
-/*    width:50%;*/
-/*    !*padding: 5%;*!*/
-/*    margin: 5% auto;*/
-/*}*/
-
 .second-layer-center {
-    color: white;
+    color: #396d63;
     text-align: center;
     font-weight: bold;
     font-size: 3rem;
@@ -90,13 +72,23 @@
     font-family: 'Satisfy', cursive;
 }
 
+.second-layer-left-photo {
+    border: 8px solid white;
+    margin-top: 2%;
+}
+
+.second-layer-right-photo {
+    border: 8px solid white;
+    margin-top: 2%;
+}
+
 @media (orientation: portrait) {
     .second-layer-left-photo {
-        width:55vw;
+        width:45vw;
     }
 
     .second-layer-right-photo {
-        width: 55vw;
+        width: 45vw;
     }
 
     .second-layer-text-intro {
@@ -124,7 +116,7 @@
     text-align: center;
     padding-top:1%;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 120%;
     font-family: 'Satisfy', cursive;
 }
