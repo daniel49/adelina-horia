@@ -1,7 +1,30 @@
 .third-layer {
     position:relative;
     width: 100%;
-    min-height:100vh;
+    max-height:100vh;
     background-color: #F5EBF2;
     border-top: 8px solid #396d63;
+}
+
+.third-layer-photo {
+    width: 100%;
+    opacity: 0.8;
+}
+
+.third-layer-content {
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.third-layer-button svg {
+    color: #902c68 !important;
+    width: 2em !important;
+    height: 2em !important;
+}
+
+.third-layer-button svg:hover {
+    color: deeppink !important;
 }

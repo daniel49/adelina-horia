@@ -154,7 +154,7 @@ class SecondLayer extends React.Component {
                                 }
                                 {
                                     (this.state.showLeftImage && this.state.showRightImage) &&
-                                    <div style={{textAlign: "center"}}>
+                                    <div style={{textAlign: "center", marginTop: "12px"}}>
                                         <BorderButton className={"second-layer-button-navigation"} onClick={this.props.onNavigateClick} content={<GoDownIcon/>} animate={true}/>
                                     </div>
                                 }

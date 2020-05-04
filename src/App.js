@@ -3,6 +3,8 @@ import { Waypoint } from 'react-waypoint';
 import FirstLayer from './layers/firstLayer/firstLayer';
 import SecondLayer from './layers/secondLayer/secondLayer';
 import ThirdLayer from './layers/thirdLayer/thirdLayer';
+import FourthLayer from "./layers/fourthLayer/fourthLayer";
+import Footer from "./layers/footer/footer";
 
 
 export const scrollTo = (position) => {
@@ -43,6 +45,22 @@ class App extends React.Component {
         scrollTo(offset);
     };
 
+    navigateToFourthLayer = () => {
+        let bodyRect = document.body.getBoundingClientRect();
+        let elemRect = document.getElementsByClassName("fourth-layer")[0].getBoundingClientRect();
+        let offset = elemRect.top - bodyRect.top;
+
+        scrollTo(offset);
+    };
+
+    navigateToFirstLayer = () => {
+        let bodyRect = document.body.getBoundingClientRect();
+        let elemRect = document.getElementsByClassName("first-layer")[0].getBoundingClientRect();
+        let offset = elemRect.top - bodyRect.top;
+
+        scrollTo(offset);
+    };
+
     render() {
 
         const SecondLayerWithRef = React.forwardRef((props, ref) => {
@@ -60,7 +78,9 @@ class App extends React.Component {
                 <Waypoint onEnter={this.navigatedToSecondLayer}>
                     <SecondLayerWithRef />
                 </Waypoint>
-                <ThirdLayer />
+                <ThirdLayer onNavigateClick={this.navigateToFourthLayer} />
+                <FourthLayer />
+                <Footer onNavigateClick={this.navigateToFirstLayer} />
             </div>
         );
     }

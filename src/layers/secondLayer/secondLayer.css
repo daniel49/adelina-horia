@@ -2,7 +2,7 @@
     position:relative;
     width: 100%;
     min-height:100vh;
-    background-color: #f5ebeb;
+    background-color: snow;
     border-top: 8px solid #396d63;
  }
 
@@ -116,7 +116,7 @@
     text-align: center;
     padding-top:1%;
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 120%;
     font-family: 'Satisfy', cursive;
 }
