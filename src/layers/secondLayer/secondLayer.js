@@ -1,8 +1,9 @@
 import React from 'react';
-import {fadeInLeft, fadeInRight} from 'react-animations';
+import {fadeInLeft, fadeInRight, flash} from 'react-animations';
 import Typewriter from "typewriter-effect";
 import styled, {keyframes} from "styled-components";
 import Grid from '@material-ui/core/Grid'
+import FavoriteIcon from '@material-ui/icons/FavoriteBorder';
 
 import './secondLayer.css';
 
@@ -26,6 +27,7 @@ class SecondLayer extends React.Component {
         this.state = {
             showLeftImage: false,
             showRightImage: false,
+            middleCharacter: '&'
         }
     }
 
@@ -33,6 +35,7 @@ class SecondLayer extends React.Component {
     render() {
         const LeftImageAnimation = styled.div`text-align: center; animation: 2s ${keyframes`${fadeInLeft}`}`;
         const RightImageAnimation = styled.div`text-align: center; animation: 2s ${keyframes`${fadeInRight}`}`;
+        const HeartAnimation = styled.div`text-align: center; animation: 4s ${keyframes`${flash}`}`;
 
         return (
             <div className={"second-layer"} ref={this.props.innerRef}>
@@ -62,7 +65,7 @@ class SecondLayer extends React.Component {
                                                 onInit={(typewriter) => {
                                                     typewriter
                                                         .pauseFor(500)
-                                                        .typeString("Ati ghicit !")
+                                                        .typeString("Ai ghicit")
                                                         .pauseFor(500)
                                                         .callFunction((a,b) => {
                                                             document.querySelector(".second-layer-text-intro .Typewriter__cursor").innerHTML = "";
@@ -100,7 +103,7 @@ class SecondLayer extends React.Component {
                                                 }
                                             </Grid>
                                             <Grid item lg={2} xs={12} className={"second-layer-center"}>
-                                                &
+                                                {this.state.middleCharacter}
                                             </Grid>
                                             <Grid item lg={5} xs={12} className={"second-layer-right"}>
                                                 <div className={"second-layer-right-intro"}>
@@ -116,7 +119,7 @@ class SecondLayer extends React.Component {
                                                                 .pauseFor(500)
                                                                 .callFunction((a,b) => {
                                                                     document.querySelector(".second-layer-right-intro .Typewriter__cursor").innerHTML = "";
-                                                                    this.setState({showRightImage: true});
+                                                                    this.setState({showRightImage: true, middleCharacter: <HeartAnimation><FavoriteIcon style={{fontSize: "4rem"}} htmlColor={'#902c68'} /></HeartAnimation>});
                                                                 })
                                                                 .start();
                                                         }}
@@ -141,7 +144,7 @@ class SecondLayer extends React.Component {
                                                         onInit={(typewriter) => {
                                                             typewriter
                                                                 .pauseFor(1000)
-                                                                .typeString("Se casatoresc!!!")
+                                                                .typeString("Se casatoresc")
                                                                 .pauseFor(500)
                                                                 .callFunction((a,b) => {
                                                                     document.querySelector(".second-layer-text-extra1 .Typewriter__cursor").innerHTML = "";
@@ -154,7 +157,7 @@ class SecondLayer extends React.Component {
                                         }
                                         {
                                             (this.state.showLeftImage && this.state.showRightImage) &&
-                                            <div style={{textAlign: "center", marginTop: "12px"}}>
+                                            <div style={{textAlign: "center", marginTop: "4px"}}>
                                                 <BorderButton className={"second-layer-button-navigation"} onClick={this.props.onNavigateClick} content={<GoDownIcon/>} animate={true}/>
                                             </div>
                                         }

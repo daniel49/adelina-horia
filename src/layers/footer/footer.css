@@ -5,6 +5,34 @@
     background-color: #396d63;
 }
 
+.footer-layer-text-container {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.footer-layer-text {
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+    font-family: 'Satisfy', cursive;
+}
+
+.footer-layer-image-container {
+    left:0;
+    right:0;
+    text-align: center;
+    height: 30vh;
+}
+
+.footer-layer-image {
+    vertical-align: center;
+    width: 26vh;
+    height:22vh;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
 .goto-beginning-container {
     position: absolute;
     text-align: center;
@@ -22,3 +50,26 @@
 .goto-beginning-button svg:hover {
     color: white !important;
 }
+
+.footer-bottom-left-text {
+    font-family: 'Ruluko', sans-serif;
+    color: white;
+    font-size: 1.2em;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.footer-bottom-right-text {
+    font-family: 'Ruluko', sans-serif;
+    color: white;
+    font-size: 1.2em;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
