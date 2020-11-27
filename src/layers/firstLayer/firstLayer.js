@@ -53,7 +53,7 @@ class FirstLayer extends React.Component {
                     }
                 </div>
 
-                <picture>
+                <picture className={"first-layer-picture"}>
                     <source media="(orientation: portrait) and (min-aspect-ratio: 3/4)" srcSet={I1_pt_4pe3} />
                     <source media="(orientation: portrait) and (min-aspect-ratio: 2/3)" srcSet={I1_pt_3pe2} />
                     <source media="(orientation: portrait) and (min-aspect-ratio: 5/9)" srcSet={I1_pt_5pe9} />

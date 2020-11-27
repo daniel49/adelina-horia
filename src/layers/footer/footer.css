@@ -23,18 +23,20 @@
     right:0;
     text-align: center;
     height: 30vh;
+    position: relative;
+    display: flex;
 }
 
 .footer-layer-image {
-    vertical-align: center;
     width: 26vh;
     height:22vh;
     border-radius: 50%;
     opacity: 0.6;
+    margin: auto;
 }
 
 .goto-beginning-container {
-    position: absolute;
+    position: relative;
     text-align: center;
     left: 0;
     right: 0;

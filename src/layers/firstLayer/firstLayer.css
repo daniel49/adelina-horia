@@ -39,3 +39,7 @@
 .first-layer-photo{
     width: 100%;
 }
+
+.first-layer-picture {
+    display: flex !important;
+}

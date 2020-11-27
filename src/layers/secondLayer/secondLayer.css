@@ -2,8 +2,11 @@
     position:relative;
     width: 100%;
     min-height:100vh;
-    background-color: snow;
-    border-top: 8px solid #396d63;
+    background-image:
+        radial-gradient(
+            snow 10%,
+            #e5e9e5 90%
+    );
  }
 
 .second-layer-top-floral img {

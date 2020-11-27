@@ -22,7 +22,7 @@ class ThirdLayer extends React.Component {
         return (
             <div className={"third-layer"}>
 
-                <picture>
+                <picture className={"thrid-layer-picture"}>
                     <source media="(orientation: portrait) and (min-aspect-ratio: 3/4)" srcSet={I3_pt_3pe4} />
                     <source media="(orientation: portrait) and (min-aspect-ratio: 2/3)" srcSet={I3_pt_2pe3} />
                     <source media="(orientation: portrait) and (min-aspect-ratio: 9/16)" srcSet={I3_pt_9pe16} />

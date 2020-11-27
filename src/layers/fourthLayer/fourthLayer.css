@@ -1,8 +1,68 @@
 .fourth-layer {
     position:relative;
     width: 100%;
-    min-height:100vh;
+    min-height:210vh;
     background-color: snow;
-    border-top: 8px solid #396d63;
+    background-image:
+            radial-gradient(
+                    snow 10%,
+                    #e5e9e5 90%
+            );
 }
 
+.fourth-layer-1, .fourth-layer-2, .fourth-layer-3 {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    bottom:0;
+    text-align: center;
+    display: flex;
+}
+
+.fourth-layer-text-intro {
+    position:relative;
+    color: #396d63;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 120%;
+    font-family: 'Satisfy', cursive;
+    padding-top: 1rem;
+}
+
+.fourth-layer-symbol {
+    font-size: 4rem !important;
+    margin: auto;
+}
+
+.fourth-layer-center-animation {
+    margin: auto !important;
+}
+
+.fourth-layer-first-part {
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    left: 0;
+    height: 100%;
+    display: flex;
+}
+
+.fourth-layer-first-part-text {
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+}
+
+.fourth-layer-church {
+    width: 30vw;
+}
+
+.fourth-layer-second-part {
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    right: 0;
+    height: 100%;
+    display: flex;
+}
