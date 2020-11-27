@@ -124,7 +124,7 @@ class FourthLayer extends React.Component {
                                             <img className={"fourth-layer-ballroom-image"} src={BallroomImage} alt={"ballroom"} />
                                         </div>
                                         <p className={"fourth-layer-third-part-text"}>
-                                            <b>Receptia & Petrecerea</b><br/>Mergem si petrecem impreuna la<br/>Club Bucovina Ballroom din Gura Humorului<br/>ora <b>XX:YY</b>
+                                            <b>Receptia & Petrecerea</b><br/>Mergem si petrecem impreuna la<br/><b>Club Bucovina Ballroom din Gura Humorului</b><br/>ora <b>XX:YY</b>
                                         </p>
                                     </ScrollAnimation>
                                 )
