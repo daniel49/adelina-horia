@@ -1,7 +1,6 @@
 .fourth-layer {
     position:relative;
     width: 100%;
-    min-height:210vh;
     background-color: snow;
     background-image:
             radial-gradient(
@@ -11,13 +10,37 @@
 }
 
 .fourth-layer-1, .fourth-layer-2, .fourth-layer-3 {
-    height: 70vh;
     width: 100%;
     position: relative;
     top: 0;
     bottom:0;
     text-align: center;
     display: flex;
+}
+
+.fourth-layer-church-image {
+    max-width: 80%;
+    height: auto;
+}
+
+.fourth-layer-ballroom-image {
+    max-width: 80%;
+    height: auto;
+}
+
+@media (orientation: portrait) {
+    .fourth-layer-1 {
+        height: 30vh;
+    }
+    .fourth-layer-2, .fourth-layer-3 {
+        height: 60vh;
+    }
+}
+
+@media (orientation: landscape) {
+    .fourth-layer-1, .fourth-layer-2, .fourth-layer-3 {
+        height: 60vh;
+    }
 }
 
 .fourth-layer-text-intro {
@@ -38,31 +61,11 @@
 
 .fourth-layer-center-animation {
     margin: auto !important;
+    width: fit-content !important;
+    top:0 !important;
 }
 
-.fourth-layer-first-part {
-    position: absolute;
-    width: 50%;
-    text-align: center;
-    left: 0;
-    height: 100%;
-    display: flex;
-}
-
-.fourth-layer-first-part-text {
+.fourth-layer-first-part-text, .fourth-layer-second-part-text, .fourth-layer-third-part-text {
     font-family: 'Poppins', sans-serif;
-    margin: auto;
-}
-
-.fourth-layer-church {
-    width: 30vw;
-}
-
-.fourth-layer-second-part {
-    position: absolute;
-    width: 50%;
-    text-align: center;
-    right: 0;
-    height: 100%;
-    display: flex;
+    font-size: 1rem;
 }
