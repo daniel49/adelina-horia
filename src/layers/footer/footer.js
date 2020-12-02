@@ -22,10 +22,10 @@ class Footer extends React.Component {
                     <BorderTopButton className={"goto-beginning-button"} onClick={this.props.onNavigateClick} content={<GoUpIcon/>} animate={true}/>
                 </div>
                 <div className={'footer-bottom-left-text'}>
-                    Realizat cu <b>dragoste</b> pentru<br/><b>Adelina</b> & <b>Horia</b> de catre<br/><b>Daniel</b> & <b>Ema</b>
+                    Realizat cu <b>dragoste</b> pentru<br/><b>Adelina</b> & <b>Horia</b>
                 </div>
                 <div className={'footer-bottom-right-text'}>
-                    Va uram <b>casa de piatra</b> si <br/> multe clipe fericite<br/><b>impreuna</b><br/>
+                    Va uram <b>casa de piatra</b> si <br/> multe clipe fericite <b>impreuna</b><br/>
                 </div>
             </div>
         );
