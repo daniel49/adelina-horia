@@ -4,6 +4,7 @@ import FirstLayer from './layers/firstLayer/firstLayer';
 import SecondLayer from './layers/secondLayer/secondLayer';
 import ThirdLayer from './layers/thirdLayer/thirdLayer';
 import FourthLayer from "./layers/fourthLayer/fourthLayer";
+import FifthLayer from './layers/fifthLayer/fifthLayer';
 import Footer from "./layers/footer/footer";
 
 
@@ -53,6 +54,14 @@ class App extends React.Component {
         scrollTo(offset);
     };
 
+    navigateToFifthLayer = () => {
+        let bodyRect = document.body.getBoundingClientRect();
+        let elemRect = document.getElementsByClassName("fifth-layer")[0].getBoundingClientRect();
+        let offset = elemRect.top - bodyRect.top;
+
+        scrollTo(offset);
+    };
+
     navigateToFirstLayer = () => {
         let bodyRect = document.body.getBoundingClientRect();
         let elemRect = document.getElementsByClassName("first-layer")[0].getBoundingClientRect();
@@ -78,7 +87,8 @@ class App extends React.Component {
                     <SecondLayerWithRef />
                 </Waypoint>
                 <ThirdLayer onNavigateClick={this.navigateToFourthLayer} />
-                <FourthLayer />
+                <FourthLayer onNavigateClick={this.navigateToFifthLayer} />
+                <FifthLayer />
                 <Footer onNavigateClick={this.navigateToFirstLayer} />
             </div>
         );

@@ -1,0 +1,36 @@
+.fifth-layer {
+    position:relative;
+    display: flow-root;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8eced;
+}
+
+.fifth-layer-text-intro {
+    position:relative;
+    color: #396d63;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 120%;
+    font-family: 'Satisfy', cursive;
+    padding-top: 1rem;
+}
+
+.fifth-layer-dialog-paper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 4% auto 4% auto;
+}
+
+.fifth-layer-dialog-grid {
+    font-family: 'Roboto', sans-serif;
+    width: 50%;
+    padding: 5%;
+}
+
+.MuiFormLabel-root {
+    color: #902c68 !important;
+    font-weight: bold !important;
+}

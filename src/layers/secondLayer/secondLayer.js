@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import styled, {keyframes} from "styled-components";
 import Grid from '@material-ui/core/Grid'
 import FavoriteIcon from '@material-ui/icons/FavoriteBorder';
+import Paper from '@material-ui/core/Paper';
 
 import './secondLayer.css';
 
@@ -98,7 +99,9 @@ class SecondLayer extends React.Component {
                                                 {
                                                     (this.state.showLeftImage && this.state.showRightImage) &&
                                                     <LeftImageAnimation>
-                                                        <img className={"second-layer-left-photo"} src={I2_left} alt={"Not found"} />
+                                                        <Paper elevation={4} style={{height: 'fit-content', width: 'fit-content', margin: 'auto', padding:'10px 10px 6px 10px'}}>
+                                                            <img className={"second-layer-left-photo"} src={I2_left} alt={"Not found"} />
+                                                        </Paper>
                                                     </LeftImageAnimation>
                                                 }
                                             </Grid>
@@ -128,7 +131,9 @@ class SecondLayer extends React.Component {
                                                 {
                                                     (this.state.showLeftImage && this.state.showRightImage) &&
                                                     <RightImageAnimation>
-                                                        <img className={"second-layer-right-photo"} src={I2_right} alt={"Not found"} />
+                                                        <Paper elevation={4} style={{height: 'fit-content', width: 'fit-content', margin: 'auto', padding:'10px 10px 6px 10px'}}>
+                                                            <img className={"second-layer-right-photo"} src={I2_right} alt={"Not found"} />
+                                                        </Paper>
                                                     </RightImageAnimation>
                                                 }
                                             </Grid>

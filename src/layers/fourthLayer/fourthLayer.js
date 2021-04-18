@@ -2,11 +2,13 @@ import React from 'react';
 import './fourthLayer.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
-import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
+import AccountBalanceIcon from "@material-ui/icons/House";
 import MusicNoteIcon from "@material-ui/icons/MusicNote";
 import ChurchImage from "./church.jpeg";
 import BallroomImage from "./ballroom.jpeg";
 import Grid from "@material-ui/core/Grid";
+import BorderButton from "../../Buttons/BorderButton/borderButton";
+import GoDownIcon from "@material-ui/icons/PlayForWork";
 
 
 class FourthLayer extends React.Component {
@@ -124,13 +126,16 @@ class FourthLayer extends React.Component {
                                             <img className={"fourth-layer-ballroom-image"} src={BallroomImage} alt={"ballroom"} />
                                         </div>
                                         <p className={"fourth-layer-third-part-text"}>
-                                            <b>Receptia & Petrecerea</b><br/>Mergem si petrecem impreuna la<br/><b>Club Bucovina Ballroom din Gura Humorului</b><br/>ora <b>XX:YY</b>
+                                            <b>Receptia & Petrecerea</b><br/>Mergem si petrecem impreuna la<br/><b>Club Bucovina Ballroom din Gura Humorului</b><br/>ora <b>18</b>
                                         </p>
                                     </ScrollAnimation>
                                 )
                             }
                         </Grid>
                     </Grid>
+                </div>
+                <div className={"fourth-layer-content"}>
+                    <BorderButton className={"third-layer-button"} onClick={this.props.onNavigateClick} content={<GoDownIcon/>} animate={true}/>
                 </div>
             </div>
         );

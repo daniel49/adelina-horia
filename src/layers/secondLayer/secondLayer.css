@@ -62,6 +62,7 @@
     font-size: 2rem;
     line-height: 120%;
     font-family: 'Satisfy', cursive;
+    margin-bottom: 1rem;
 }
 
 
@@ -73,16 +74,15 @@
     font-size: 2rem;
     line-height: 120%;
     font-family: 'Satisfy', cursive;
+    margin-bottom: 1rem;
 }
 
 .second-layer-left-photo {
-    border: 8px solid white;
-    margin-top: 2%;
+
 }
 
 .second-layer-right-photo {
-    border: 8px solid white;
-    margin-top: 2%;
+
 }
 
 @media (orientation: portrait) {
