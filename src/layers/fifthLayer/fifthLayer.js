@@ -9,12 +9,12 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import Paper from '@material-ui/core/Paper';
 import Slider from '@material-ui/core/Slider';
-import Typography from "@material-ui/core/Typography";
 import SendIcon from '@material-ui/icons/Send';
 import Button from '@material-ui/core/Button';
 import ScrollAnimation from "react-animate-on-scroll";
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
+import * as emailjs from 'emailjs-com';
 
 
 const Alert = (props) => {
@@ -58,31 +58,65 @@ class FifthLayer extends React.Component {
 
     submit = () => {
         const {nume, telefon, particip, insotit, numePartener,
-            cuCopii, numarCopii, tipMeniu} = this.state;
+            cuCopii, numarCopii, tipMeniu, textInvitat, motivNeparticipare, alergii} = this.state;
 
 
         if (! nume || ! telefon || ! particip || (
                 (! insotit || (! numePartener && insotit === 'Da')
-                    || ! cuCopii || (! numarCopii && cuCopii === 'Da') || ! tipMeniu) && particip === 'Da'
-                )
+                    || ! cuCopii || (! numarCopii && cuCopii === 'Da') || ! tipMeniu) && particip === 'Da')
         ) {
             this.setState({isPopupOpened: true, popupSeverity: 'error', popupMessage: "Nu ati terminat de completat toate datele"});
             return;
         }
+        let form = this.buildFormData(nume, telefon, particip, motivNeparticipare, insotit, numePartener, cuCopii, numarCopii, tipMeniu, alergii, textInvitat);
+        let mesaj = Object.keys(form).reduce((p, k) => `${p}\n${k} : ${form[k] ? form[k] : '-'},`, "");
 
-        this.setState({isPopupOpened: true, popupSeverity: 'success', popupMessage: 'Un e-mail cu decizia dumneavoastra a fost trimis catre Adelia si Horia',
-            nume: '',
-            telefon: '',
-            particip: '',
-            insotit: '',
-            numePartener: '',
-            cuCopii: '',
-            numarCopii: 1,
-            tipMeniu: '',
-            alergii: '',
-            textInvitat: '',
-            motivNeparticipare: ''});
+        console.log(form);
+        console.log(mesaj);
+        emailjs.send("service_47xughn", "template_m2l454p", {
+            nume: nume,
+            mesaj: mesaj,
+        }, "user_ASYf1h1u0VnZnQhwfaMhT")
+            .then(success => {
+                    this.setState({isPopupOpened: true, popupSeverity: 'success', popupMessage: 'Un e-mail cu decizia dumneavoastra a fost trimis catre Adelia si Horia',
+                        nume: '',
+                        telefon: '',
+                        particip: '',
+                        insotit: '',
+                        numePartener: '',
+                        cuCopii: '',
+                        numarCopii: 1,
+                        tipMeniu: '',
+                        alergii: '',
+                        textInvitat: '',
+                        motivNeparticipare: ''});
+                },
+                error => {
+                    this.setState({isPopupOpened: true, popupSeverity: 'error', popupMessage: "E-mailul nu s-a putut transmite. Luati legatura personal cu Adelina si Horia"});
+                }
+            );
+
+
     };
+
+    buildFormData(nume, telefon, particip, motivNeparticipare, insotit, numePartener, cuCopii, numarCopii, tipMeniu, alergii, textInvitat) {
+        let form = {nume, telefon, particip};
+        if (particip === 'Nu') {
+            form.motivNeparticipare = motivNeparticipare;
+            return form;
+        }
+        form.insotit = insotit;
+        if (insotit === 'Da') {
+            form.numePartener = numePartener;
+        }
+        form.cuCopii = cuCopii;
+        if (form.cuCopii === 'Da')
+            form.numarCopii = numarCopii;
+        form.tipMeniu = tipMeniu;
+        form.alergii = alergii;
+        form.textInvitat = textInvitat;
+        return form;
+    }
 
     render() {
         const {isPopupOpened, popupSeverity, popupMessage, nume, telefon, particip, insotit, numePartener,
