@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bc97231d26b95c888eaa6af064a97b7b",
+    "revision": "3ac13cf0786e4438ea8c061af3d175aa",
     "url": "/adelina-horia/index.html"
   },
   {
-    "revision": "71db73d59b146c6c6b1d",
+    "revision": "00b2fd86859695aec39d",
     "url": "/adelina-horia/static/css/main.7b3b21c1.chunk.css"
   },
   {
-    "revision": "456d4aab483756ecccc4",
-    "url": "/adelina-horia/static/js/2.15353842.chunk.js"
+    "revision": "0095306ec16f241ee553",
+    "url": "/adelina-horia/static/js/2.18cb79c7.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/adelina-horia/static/js/2.15353842.chunk.js.LICENSE.txt"
+    "url": "/adelina-horia/static/js/2.18cb79c7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "71db73d59b146c6c6b1d",
-    "url": "/adelina-horia/static/js/main.6bcaeb4b.chunk.js"
+    "revision": "00b2fd86859695aec39d",
+    "url": "/adelina-horia/static/js/main.a7bd253a.chunk.js"
   },
   {
     "revision": "ed1dc97437465afdeea9",

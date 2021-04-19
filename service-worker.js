@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/adelina-horia/precache-manifest.ade1b4f5eb060d75d843d0c1f64b5d27.js"
+  "/adelina-horia/precache-manifest.7070042af9a01e3ce3f20c4ddfe04d3b.js"
 );
 
 self.addEventListener('message', (event) => {
