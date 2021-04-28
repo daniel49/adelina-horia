@@ -12,7 +12,7 @@ class Footer extends React.Component {
             <div className={"footer-layer"}>
                 <div className={'footer-layer-text-container'}>
                     <p className={'footer-layer-text'}>
-                        Te asteptam cu drag
+                        Vă așteptăm cu drag
                     </p>
                 </div>
                 <div className={'footer-layer-image-container'}>
@@ -25,7 +25,7 @@ class Footer extends React.Component {
                     Realizat cu <b>dragoste</b> pentru<br/><b>Adelina</b> & <b>Horia</b>
                 </div>
                 <div className={'footer-bottom-right-text'}>
-                    Va uram <b>casa de piatra</b> si <br/> multe clipe fericite <b>impreuna</b><br/>
+                    Vă urăm <b>casă de piatră</b> și <br/> multe clipe fericite <b>împreună</b><br/>
                 </div>
             </div>
         );

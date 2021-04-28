@@ -66,7 +66,7 @@ class SecondLayer extends React.Component {
                                                 onInit={(typewriter) => {
                                                     typewriter
                                                         .pauseFor(500)
-                                                        .typeString("Ai ghicit")
+                                                        .typeString("Ați ghicit")
                                                         .pauseFor(500)
                                                         .callFunction((a,b) => {
                                                             document.querySelector(".second-layer-text-intro .Typewriter__cursor").innerHTML = "";
@@ -149,7 +149,7 @@ class SecondLayer extends React.Component {
                                                         onInit={(typewriter) => {
                                                             typewriter
                                                                 .pauseFor(1000)
-                                                                .typeString("Se casatoresc")
+                                                                .typeString("Se căsătoresc")
                                                                 .pauseFor(500)
                                                                 .callFunction((a,b) => {
                                                                     document.querySelector(".second-layer-text-extra1 .Typewriter__cursor").innerHTML = "";

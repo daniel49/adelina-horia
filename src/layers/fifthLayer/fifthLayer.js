@@ -14,6 +14,9 @@ import Button from '@material-ui/core/Button';
 import ScrollAnimation from "react-animate-on-scroll";
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
+import Tooltip from '@material-ui/core/Tooltip';
+import InfoIcon from '@material-ui/icons/Info';
+import IconButton from '@material-ui/core/IconButton';
 import * as emailjs from 'emailjs-com';
 
 
@@ -65,34 +68,35 @@ class FifthLayer extends React.Component {
                 (! insotit || (! numePartener && insotit === 'Da')
                     || ! cuCopii || (! numarCopii && cuCopii === 'Da') || ! tipMeniu) && particip === 'Da')
         ) {
-            this.setState({isPopupOpened: true, popupSeverity: 'error', popupMessage: "Nu ati terminat de completat toate datele"});
+            this.setState({isPopupOpened: true, popupSeverity: 'error', popupMessage: "Nu ați terminat de completat toate datele"});
             return;
         }
         let form = this.buildFormData(nume, telefon, particip, motivNeparticipare, insotit, numePartener, cuCopii, numarCopii, tipMeniu, alergii, textInvitat);
         let mesaj = Object.keys(form).reduce((p, k) => `${p}\n${k} : ${form[k] ? form[k] : '-'},`, "");
 
-        console.log(form);
-        console.log(mesaj);
+
         emailjs.send("service_47xughn", "template_m2l454p", {
             nume: nume,
             mesaj: mesaj,
         }, "user_ASYf1h1u0VnZnQhwfaMhT")
             .then(success => {
-                    this.setState({isPopupOpened: true, popupSeverity: 'success', popupMessage: 'Un e-mail cu decizia dumneavoastra a fost trimis catre Adelia si Horia',
-                        nume: '',
-                        telefon: '',
-                        particip: '',
-                        insotit: '',
-                        numePartener: '',
-                        cuCopii: '',
-                        numarCopii: 1,
-                        tipMeniu: '',
-                        alergii: '',
-                        textInvitat: '',
-                        motivNeparticipare: ''});
+                    this.setState({isPopupOpened: true, popupSeverity: 'success', popupMessage: 'Un e-mail cu decizia dumneavoastră a fost trimis către Adelia și Horia'});
+                    setTimeout(() =>
+                        this.setState({
+                            nume: '',
+                            telefon: '',
+                            particip: '',
+                            insotit: '',
+                            numePartener: '',
+                            cuCopii: '',
+                            numarCopii: 1,
+                            tipMeniu: '',
+                            alergii: '',
+                            textInvitat: '',
+                            motivNeparticipare: ''}), 8000);
                 },
                 error => {
-                    this.setState({isPopupOpened: true, popupSeverity: 'error', popupMessage: "E-mailul nu s-a putut transmite. Luati legatura personal cu Adelina si Horia"});
+                    this.setState({isPopupOpened: true, popupSeverity: 'error', popupMessage: "E-mailul nu s-a putut transmite. Luați legătura personal cu Adelina si Horia"});
                 }
             );
 
@@ -122,6 +126,10 @@ class FifthLayer extends React.Component {
         const {isPopupOpened, popupSeverity, popupMessage, nume, telefon, particip, insotit, numePartener,
             cuCopii, numarCopii, tipMeniu, alergii, textInvitat, motivNeparticipare} = this.state;
 
+        const gdpr = "GDPR : informațiile furnizate în cadrul formularului vor fi folosite strict " +
+            "pentru informare și nu vor fi stocate în altă parte decât pe căsuța de e-mail (Gmail) a lui Adelina și Horia." +
+            "Trimiterea e-mailului reprezintă acordul dvs. că datele furnizate vor fi folosite strict în scopul menționat anterior.";
+
         return (
             <div className={'fifth-layer'}>
                 <div className={"fifth-layer-text-intro"}>
@@ -131,13 +139,17 @@ class FifthLayer extends React.Component {
                     open={isPopupOpened}
                     autoHideDuration={8000}
                     onClose={this.handlePopupClose}
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
                 >
                     <Alert onClose={this.handlePopupClose} severity={popupSeverity}>
                         {popupMessage}
                     </Alert>
                 </Snackbar>
                 <Paper elevation={3} className="fifth-layer-dialog-paper">
+                    <Tooltip enterTouchDelay={50} title={gdpr} color="secondary">
+                        <IconButton aria-label="GDPR">
+                            <InfoIcon />
+                        </IconButton>
+                    </Tooltip>
                     <Grid
                         container
                         direction="row"
@@ -169,7 +181,7 @@ class FifthLayer extends React.Component {
                                 animateOnce={true}
                             >
                                 <FormControl component="fieldset">
-                                    <FormLabel component="legend" color={'secondary'}>Veti putea participa? *</FormLabel>
+                                    <FormLabel component="legend" color={'secondary'}>Veți putea participa? *</FormLabel>
                                     <RadioGroup row name="particip" id="particip" value={particip} onChange={this.handleInputChange}>
                                         <FormControlLabel value={"Da"} control={<Radio />} label="Da" />
                                         <FormControlLabel value={"Nu"} control={<Radio />} label="Nu" />
@@ -187,7 +199,7 @@ class FifthLayer extends React.Component {
                                         <TextField
                                             id="motivNeparticipare"
                                             name="motivNeparticipare"
-                                            label="Motiv (optional)"
+                                            label="Motiv (opțional)"
                                             multiline
                                             defaultValue=""
                                             onChange={this.handleInputChange}
@@ -207,7 +219,7 @@ class FifthLayer extends React.Component {
                                             animateOnce={true}
                                         >
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend" color={'secondary'}>Veniti insotit/a? *</FormLabel>
+                                                <FormLabel component="legend" color={'secondary'}>Veniți însoțit/ă? *</FormLabel>
                                                 <RadioGroup row name="insotit" id="insotit" value={insotit} onChange={this.handleInputChange}>
                                                     <FormControlLabel value={"Da"} control={<Radio />} label="Da" />
                                                     <FormControlLabel value={"Nu"} control={<Radio />} label="Nu" />
@@ -222,7 +234,7 @@ class FifthLayer extends React.Component {
                                                     animateIn='slideInDown'
                                                     animateOnce={true}
                                                 >
-                                                    <TextField id="numePartener" name="numePartener" onChange={this.handleInputChange} value={numePartener} label="Nume partener/a *" color={'secondary'} fullWidth />
+                                                    <TextField id="numePartener" name="numePartener" onChange={this.handleInputChange} value={numePartener} label="Nume partener/ă *" color={'secondary'} fullWidth />
                                                 </ScrollAnimation>
                                             </Grid>
                                     }
@@ -232,7 +244,7 @@ class FifthLayer extends React.Component {
                                             animateOnce={true}
                                         >
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend" color={'secondary'}>Cum sa fie meniul? *</FormLabel>
+                                                <FormLabel component="legend" color={'secondary'}>Cum să fie meniul? *</FormLabel>
                                                 <RadioGroup row name="tipMeniu" id="tipMeniu" value={tipMeniu} onChange={this.handleInputChange}>
                                                     <FormControlLabel value={'normal'} control={<Radio />} label="Meniu normal" />
                                                     <FormControlLabel value={'vegetarian'} control={<Radio />} label="Meniu vegetarian" />
@@ -246,7 +258,7 @@ class FifthLayer extends React.Component {
                                             animateOnce={true}
                                         >
                                             <FormControl component="fieldset">
-                                                <FormLabel component="legend" color={'secondary'}>Ne vom bucura de energia si rasetele copiilor dvs.? *</FormLabel>
+                                                <FormLabel component="legend" color={'secondary'}>Ne vom bucura de energia și râsetele copiilor dvs.? *</FormLabel>
                                                 <RadioGroup row name="cuCopii" id="cuCopii" value={cuCopii} onChange={this.handleInputChange}>
                                                     <FormControlLabel value={"Da"} control={<Radio />} label="Da" />
                                                     <FormControlLabel value={"Nu"} control={<Radio />} label="Nu" />
@@ -262,7 +274,7 @@ class FifthLayer extends React.Component {
                                                     animateOnce={true}
                                                 >
                                                     <FormControl fullWidth>
-                                                        <FormLabel color={'secondary'}>Cati copilasi vor veni? *</FormLabel>
+                                                        <FormLabel color={'secondary'}>Cați copilași vor veni? *</FormLabel>
                                                         <Slider
                                                             color={'secondary'}
                                                             value={numarCopii}
@@ -287,7 +299,7 @@ class FifthLayer extends React.Component {
                                             <TextField
                                                 id="alergii"
                                                 name="alergii"
-                                                label="Aveti alergii / restrictii la mancare? (optional)"
+                                                label="Aveți alergii / restricții la mâncare? (opțional)"
                                                 multiline
                                                 defaultValue=""
                                                 onChange={this.handleInputChange}
@@ -305,7 +317,7 @@ class FifthLayer extends React.Component {
                                             <TextField
                                                 id="textInvitat"
                                                 name="textInvitat"
-                                                label="E randul dvs. sa ne transmiteti ceva daca vreti (optional)"
+                                                label="Dacă doriți să ne transmiteți ceva (opțional)"
                                                 multiline
                                                 defaultValue=""
                                                 onChange={this.handleInputChange}
@@ -325,7 +337,7 @@ class FifthLayer extends React.Component {
                                 endIcon={<SendIcon />}
                                 onClick={this.submit}
                             >
-                                Raspunde la invitatie
+                                Răspunde la invitație
                             </Button>
                         </Grid>
                     </Grid>

@@ -33,11 +33,11 @@ class FirstLayer extends React.Component {
                             }}
                             onInit={(typewriter) => {
                                 typewriter
-                                    .pauseFor(1000).typeString('Hey').pauseFor(600).typeString('<br>Bine ai venit').pauseFor(1000).deleteChars(21)
-                                    .pauseFor(500).typeString('Cu siguranta stii de ce te afli aici').pauseFor(600).typeString('<br>Soseste,').pauseFor(300)
-                                    .typeString(' <strong><span style="color: #396d63;">in curand</span></strong>,').pauseFor(300).typeString(' momentul cel mare')
+                                    .pauseFor(1000).typeString('Hey').pauseFor(600).typeString('<br>Bine ați venit').pauseFor(1000).deleteChars(21)
+                                    .pauseFor(500).typeString('Cu siguranță știți de ce vă aflați aici').pauseFor(600).typeString('<br>Sosește,').pauseFor(300)
+                                    .typeString(' <strong><span style="color: #396d63;">în curând</span></strong>,').pauseFor(300).typeString(' momentul cel mare')
                                     .pauseFor(600).deleteChars(4).pauseFor(600).typeString('<strong><span style="color: #d24c8d;">magic</span></strong>').pauseFor(600)
-                                    .typeString("<br>Urmeaza-ma, te rog")
+                                    .typeString("<br>Urmați-mă, vă rog")
                                     .pauseFor(500)
                                     .callFunction((a,b) => {
                                         this.setState({showNext: true});

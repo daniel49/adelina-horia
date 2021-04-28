@@ -27,7 +27,7 @@ class FourthLayer extends React.Component {
         return (
             <div className={"fourth-layer"}>
                 <div className={"fourth-layer-text-intro"}>
-                    <p>Care e planul?</p>
+                    <p>Care este planul?</p>
                 </div>
 
                 <div className={"fourth-layer-1"}>
@@ -53,8 +53,8 @@ class FourthLayer extends React.Component {
                                         animateOnce={true}
                                     >
                                         <div className={"fourth-layer-first-part"}>
-                                            <p className={"fourth-layer-first-part-text"}><b>Instructiuni</b><br/>Asteptam cu nerabdare ziua de <br/>
-                                            <b>19 IULIE 2021</b><br/> sa ne vedem cu bine si plini de energie<br/>caci dansul este obligatoriu</p>
+                                            <p className={"fourth-layer-first-part-text"}><b>Instrucțiuni</b><br/>Așteptăm cu nerăbdare ziua de <br/>
+                                            <b>4 IULIE 2021</b><br/> să ne vedem cu bine și plini de energie<br/>căci dansul este obligatoriu</p>
                                         </div>
                                     </ScrollAnimation>
                                 )
@@ -77,8 +77,8 @@ class FourthLayer extends React.Component {
                                             <img className={"fourth-layer-church-image"} src={ChurchImage} alt={"church"} />
                                         </div>
                                         <p className={"fourth-layer-second-part-text"}>
-                                            <b>Cununia religioasa</b><br/>Mergem si ne atestam dragostea<br/>in fata lui Dumnezeu la<br/>
-                                            <b>Catedrala "Nasterea Maicii Domnului"</b><br/>din Gura Humorului
+                                            <b>Cununia religioasă</b><br/>Mergem și ne atestăm dragostea<br/>în fața lui Dumnezeu la<br/>
+                                            <b>Catedrala "Nașterea Maicii Domnului"</b><br/>din Gura Humorului
                                         </p>
                                     </ScrollAnimation>
 
@@ -126,7 +126,7 @@ class FourthLayer extends React.Component {
                                             <img className={"fourth-layer-ballroom-image"} src={BallroomImage} alt={"ballroom"} />
                                         </div>
                                         <p className={"fourth-layer-third-part-text"}>
-                                            <b>Receptia & Petrecerea</b><br/>Mergem si petrecem impreuna la<br/><b>Club Bucovina Ballroom din Gura Humorului</b><br/>ora <b>18</b>
+                                            <b>Recepția & Petrecerea</b><br/>Mergem și petrecem împreună la<br/><b>Club Bucovina Ballroom din Gura Humorului</b><br/>ora <b>18</b>
                                         </p>
                                     </ScrollAnimation>
                                 )
