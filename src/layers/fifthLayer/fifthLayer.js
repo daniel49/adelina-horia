@@ -43,7 +43,8 @@ class FifthLayer extends React.Component {
             tipMeniu: '',
             alergii: '',
             textInvitat: '',
-            motivNeparticipare: ''
+            motivNeparticipare: '',
+            isSubmitDisabled: false
         }
     }
 
@@ -80,7 +81,7 @@ class FifthLayer extends React.Component {
             mesaj: mesaj,
         }, "user_ASYf1h1u0VnZnQhwfaMhT")
             .then(success => {
-                    this.setState({isPopupOpened: true, popupSeverity: 'success', popupMessage: 'Un e-mail cu decizia dumneavoastră a fost trimis către Adelia și Horia'});
+                    this.setState({isPopupOpened: true, popupSeverity: 'success', popupMessage: 'Un e-mail cu decizia dumneavoastră a fost trimis către Adelia și Horia', isSubmitDisabled: true});
                     setTimeout(() =>
                         this.setState({
                             nume: '',
@@ -336,6 +337,7 @@ class FifthLayer extends React.Component {
                                 style={{margin: 'auto', display: 'flex', backgroundColor: '#396d63'}}
                                 endIcon={<SendIcon />}
                                 onClick={this.submit}
+                                disabled={this.state.isSubmitDisabled}
                             >
                                 Răspunde la invitație
                             </Button>

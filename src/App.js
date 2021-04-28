@@ -6,6 +6,7 @@ import ThirdLayer from './layers/thirdLayer/thirdLayer';
 import FourthLayer from "./layers/fourthLayer/fourthLayer";
 import FifthLayer from './layers/fifthLayer/fifthLayer';
 import Footer from "./layers/footer/footer";
+import SixthLayer from "./layers/sixthLayer/sixthLayer";
 
 
 export const scrollTo = (position) => {
@@ -89,6 +90,7 @@ class App extends React.Component {
                 <ThirdLayer onNavigateClick={this.navigateToFourthLayer} />
                 <FourthLayer onNavigateClick={this.navigateToFifthLayer} />
                 <FifthLayer />
+                <SixthLayer />
                 <Footer onNavigateClick={this.navigateToFirstLayer} />
             </div>
         );

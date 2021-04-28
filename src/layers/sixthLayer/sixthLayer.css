@@ -1,0 +1,28 @@
+.sixth-layer {
+    position:relative;
+    width: 100%;
+    background-color: snow;
+    background-image:
+            radial-gradient(
+                    snow 10%,
+                    #e5e9e5 90%
+            );
+}
+
+.sixth-layer-text-intro {
+    position:relative;
+    color: #396d63;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 120%;
+    font-family: 'Dancing Script', cursive;
+    padding-top: 1rem;
+}
+
+.sixth-layer-text-amr {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #902c68;
+}
