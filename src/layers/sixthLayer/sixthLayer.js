@@ -56,7 +56,7 @@ class SixthLayer extends React.Component {
                     <p style={{fontSize: "3.5rem"}}>Se apropie!</p>
                     <p>Au mai rămas:</p>
                 </div>
-                <Grid container direction="row" justify="center" alignItems="center" style={{paddingBottom: '5vh'}}>
+                <Grid container direction="row" justify="center" alignItems="center" style={{paddingBottom: '10vh'}}>
                     <Grid item className={"sixth-layer-text-amr"} xs={2} md={2} lg={2}>
                         <div style={{textAlign: "center"}}>
                             <p>{days}</p>
