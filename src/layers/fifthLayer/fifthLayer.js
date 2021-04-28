@@ -94,6 +94,7 @@ class FifthLayer extends React.Component {
                             tipMeniu: '',
                             alergii: '',
                             textInvitat: '',
+                            isSubmitDisabled: false,
                             motivNeparticipare: ''}), 8000);
                 },
                 error => {

@@ -14,7 +14,8 @@ import I3_pt_5pe9 from "./3_pt_5pe9.jpg";
 import I3_pt_2pe3 from "./3_pt_2pe3.jpg";
 import I3_pt_3pe4 from "./3_pt_3pe4.jpg";
 import I3_pt_9pe16 from "./3_pt_9pe16.jpg";
-
+import I3_pt_9pe19punct5 from "./3_pt_9pe19.5.jpg";
+import I3_pt_9pe18punct5 from "./3_pt_9pe18.5.jpg";
 
 class ThirdLayer extends React.Component {
 
@@ -27,6 +28,9 @@ class ThirdLayer extends React.Component {
                     <source media="(orientation: portrait) and (min-aspect-ratio: 2/3)" srcSet={I3_pt_2pe3} />
                     <source media="(orientation: portrait) and (min-aspect-ratio: 9/16)" srcSet={I3_pt_9pe16} />
                     <source media="(orientation: portrait) and (min-aspect-ratio: 5/9)" srcSet={I3_pt_5pe9} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/18.5)" srcSet={I3_pt_9pe18punct5} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/19.5)" srcSet={I3_pt_9pe19punct5} />
+
                     <source media="(orientation: landscape) and (min-aspect-ratio: 9/5)" srcSet={I3_ls_9pe5} />
                     <source media="(orientation: landscape) and (min-aspect-ratio: 16/9)" srcSet={I3_ls_16pe9} />
                     <source media="(orientation: landscape) and (min-aspect-ratio: 3/2)" srcSet={I3_ls_3pe2} />

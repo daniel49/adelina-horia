@@ -8,13 +8,15 @@ import './firstLayer.css';
 import I_o from './1_o.jpeg';
 import I1_ls_4pe3 from './1_ls_4pe3.jpeg';
 import I1_ls_16pe9 from './1_ls_16pe9.jpeg';
+import I1_ls_9pe5 from './1_ls_9pe5.jpg';
+import I1_ls_3pe2 from './1_ls_3pe2.jpg';
 
 import I1_pt_5pe9 from './1_pt_5pe9.jpeg';
 import I1_pt_4pe3 from './1_pt_4pe3.jpeg';
 import I1_pt_3pe2 from './1_pt_3pe2.jpeg';
-
-
-
+import I1_pt_9pe16 from './1_pt_9pe16.jpg';
+import I1_pt_9pe18punct5 from './1_pt_9pe18.5.jpg';
+import I1_pt_9pe19punct5 from './1_pt_9pe19.5.jpg';
 
 class FirstLayer extends React.Component {
     constructor(props) {
@@ -56,8 +58,14 @@ class FirstLayer extends React.Component {
                 <picture className={"first-layer-picture"}>
                     <source media="(orientation: portrait) and (min-aspect-ratio: 3/4)" srcSet={I1_pt_4pe3} />
                     <source media="(orientation: portrait) and (min-aspect-ratio: 2/3)" srcSet={I1_pt_3pe2} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/16)" srcSet={I1_pt_9pe16} />
                     <source media="(orientation: portrait) and (min-aspect-ratio: 5/9)" srcSet={I1_pt_5pe9} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/18.5)" srcSet={I1_pt_9pe18punct5} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/19.5)" srcSet={I1_pt_9pe19punct5} />
+
+                    <source media="(orientation: landscape) and (min-aspect-ratio: 9/5)" srcSet={I1_ls_9pe5} />
                     <source media="(orientation: landscape) and (min-aspect-ratio: 16/9)" srcSet={I1_ls_16pe9} />
+                    <source media="(orientation: landscape) and (min-aspect-ratio: 3/2)" srcSet={I1_ls_3pe2} />
                     <source media="(orientation: landscape) and (min-aspect-ratio: 4/3)" srcSet={I1_ls_4pe3} />
                     <source media="(orientation: landscape)" srcSet={I_o} />
                     <source media="(orientation: portrait)" srcSet={I_o} />
