@@ -2,6 +2,8 @@
     position:relative;
     width: 100%;
     max-height:100.1vh;
+    min-height: 100.1vh;
+    background-color: #902c68;
     /*overflow: hidden;*/
 }
 
