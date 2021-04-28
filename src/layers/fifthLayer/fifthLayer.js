@@ -127,8 +127,8 @@ class FifthLayer extends React.Component {
             cuCopii, numarCopii, tipMeniu, alergii, textInvitat, motivNeparticipare} = this.state;
 
         const gdpr = "GDPR : informațiile furnizate în cadrul formularului vor fi folosite strict " +
-            "pentru informare și nu vor fi stocate în altă parte decât pe căsuța de e-mail (Gmail) a lui Adelina și Horia." +
-            "Trimiterea e-mailului reprezintă acordul dvs. că datele furnizate vor fi folosite strict în scopul menționat anterior.";
+            "pentru informare în scopul nunții și nu vor fi stocate în altă parte decât pe căsuța de e-mail (Gmail) a lui Adelina și Horia." +
+            "Trimiterea e-mailului reprezintă acordul dvs. cu faptul că datele furnizate vor fi folosite strict în scopul menționat anterior.";
 
         return (
             <div className={'fifth-layer'}>
