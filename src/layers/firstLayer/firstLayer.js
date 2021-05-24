@@ -56,17 +56,18 @@ class FirstLayer extends React.Component {
                 </div>
 
                 <picture className={"first-layer-picture"}>
-                    <source media="(orientation: portrait) and (min-aspect-ratio: 3/4)" srcSet={I1_pt_4pe3} />
-                    <source media="(orientation: portrait) and (min-aspect-ratio: 2/3)" srcSet={I1_pt_3pe2} />
-                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/16)" srcSet={I1_pt_9pe16} />
-                    <source media="(orientation: portrait) and (min-aspect-ratio: 5/9)" srcSet={I1_pt_5pe9} />
-                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/18.5)" srcSet={I1_pt_9pe18punct5} />
-                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/19.5)" srcSet={I1_pt_9pe19punct5} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 3/4.5)" srcSet={I1_pt_4pe3} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 2/3.5)" srcSet={I1_pt_3pe2} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/16.5)" srcSet={I1_pt_9pe16} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 5/9.5)" srcSet={I1_pt_5pe9} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/19)" srcSet={I1_pt_9pe18punct5} />
+                    <source media="(orientation: portrait) and (min-aspect-ratio: 9/20)" srcSet={I1_pt_9pe19punct5} />
 
-                    <source media="(orientation: landscape) and (min-aspect-ratio: 9/5)" srcSet={I1_ls_9pe5} />
-                    <source media="(orientation: landscape) and (min-aspect-ratio: 16/9)" srcSet={I1_ls_16pe9} />
-                    <source media="(orientation: landscape) and (min-aspect-ratio: 3/2)" srcSet={I1_ls_3pe2} />
-                    <source media="(orientation: landscape) and (min-aspect-ratio: 4/3)" srcSet={I1_ls_4pe3} />
+                    <source media="(orientation: landscape) and (min-aspect-ratio: 9/5.5)" srcSet={I1_ls_9pe5} />
+                    <source media="(orientation: landscape) and (min-aspect-ratio: 16/9.5)" srcSet={I1_ls_16pe9} />
+                    <source media="(orientation: landscape) and (min-aspect-ratio: 3/2.5)" srcSet={I1_ls_3pe2} />
+                    <source media="(orientation: landscape) and (min-aspect-ratio: 4/3.5)" srcSet={I1_ls_4pe3} />
+
                     <source media="(orientation: landscape)" srcSet={I_o} />
                     <source media="(orientation: portrait)" srcSet={I_o} />
                     <img className={"first-layer-photo"} src={I_o} alt={"Not found"} />

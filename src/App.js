@@ -13,7 +13,9 @@ export const scrollTo = (position) => {
     window.scrollTo(0, position)
 };
 
-
+// function gcd (a, b) {
+//     return (b == 0) ? a : gcd (b, a%b);
+// }
 
 class App extends React.Component {
 
@@ -22,6 +24,13 @@ class App extends React.Component {
         this.state = {
             isOnSecondLayer: false
         };
+
+        // var w = window.screen.width;
+        // var h = window.screen.height;
+        // var r = gcd (w, h);
+        // console.log ("Dimensions = ", w, " x ", h, "<br>");
+        // console.log ("Gcd        = ", r, "<br>");
+        // console.log ("Aspect     = ", w/r, ":", h/r);
     }
 
     navigateToSecondLayer = () => {

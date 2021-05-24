@@ -81,7 +81,7 @@ class FifthLayer extends React.Component {
             mesaj: mesaj,
         }, "user_ASYf1h1u0VnZnQhwfaMhT")
             .then(success => {
-                    this.setState({isPopupOpened: true, popupSeverity: 'success', popupMessage: 'Un e-mail cu decizia dumneavoastră a fost trimis către Adelia și Horia', isSubmitDisabled: true});
+                    this.setState({isPopupOpened: true, popupSeverity: 'success', popupMessage: 'Un e-mail cu decizia dumneavoastră a fost trimis către Adelina și Horia', isSubmitDisabled: true});
                     setTimeout(() =>
                         this.setState({
                             nume: '',
@@ -98,7 +98,7 @@ class FifthLayer extends React.Component {
                             motivNeparticipare: ''}), 8000);
                 },
                 error => {
-                    this.setState({isPopupOpened: true, popupSeverity: 'error', popupMessage: "E-mailul nu s-a putut transmite. Luați legătura personal cu Adelina si Horia"});
+                    this.setState({isPopupOpened: true, popupSeverity: 'error', popupMessage: "E-mailul nu s-a putut transmite. Luați legătura personal cu Adelina și Horia"});
                 }
             );
 

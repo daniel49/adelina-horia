@@ -78,10 +78,9 @@ class FourthLayer extends React.Component {
                                         </div>
                                         <p className={"fourth-layer-second-part-text"}>
                                             <b>Cununia religioasă</b><br/>Mergem și ne atestăm dragostea<br/>în fața lui Dumnezeu la<br/>
-                                            <b>Catedrala "Nașterea Maicii Domnului"</b><br/>din Gura Humorului
+                                            <b>Catedrala "Nașterea Maicii Domnului"</b><br/>din Gura Humorului<br/>ora <b>16</b>
                                         </p>
                                     </ScrollAnimation>
-
                                 )
                             }
                         </Grid>

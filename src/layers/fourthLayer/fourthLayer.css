@@ -30,10 +30,10 @@
 
 @media (orientation: portrait) {
     .fourth-layer-1 {
-        height: 30vh;
+        height: 40vh;
     }
     .fourth-layer-2, .fourth-layer-3 {
-        height: 60vh;
+        height: 70vh;
     }
 }
 
