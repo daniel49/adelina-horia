@@ -78,7 +78,7 @@ class FourthLayer extends React.Component {
                                         </div>
                                         <p className={"fourth-layer-second-part-text"}>
                                             <b>Cununia religioasă</b><br/>Mergem și ne atestăm dragostea<br/>în fața lui Dumnezeu la<br/>
-                                            <b>Catedrala "Nașterea Maicii Domnului"</b><br/>din Gura Humorului<br/>ora <b>16</b>
+                                            <b>Catedrala "Nașterea Maicii Domnului"</b><br/>din Gura Humorului<br/>ora <b>16:00</b>
                                         </p>
                                     </ScrollAnimation>
                                 )
@@ -125,7 +125,7 @@ class FourthLayer extends React.Component {
                                             <img className={"fourth-layer-ballroom-image"} src={BallroomImage} alt={"ballroom"} />
                                         </div>
                                         <p className={"fourth-layer-third-part-text"}>
-                                            <b>Recepția & Petrecerea</b><br/>Mergem și petrecem împreună la<br/><b>Club Bucovina Ballroom din Gura Humorului</b><br/>ora <b>18</b>
+                                            <b>Recepția & Petrecerea</b><br/>Mergem și petrecem împreună la<br/><b>Club Bucovina Ballroom din Gura Humorului</b><br/>ora <b>18:00</b>
                                         </p>
                                     </ScrollAnimation>
                                 )
