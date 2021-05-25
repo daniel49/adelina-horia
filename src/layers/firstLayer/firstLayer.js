@@ -2,21 +2,21 @@ import React from 'react';
 import Typewriter from 'typewriter-effect';
 import GoDownIcon from '@material-ui/icons/PlayForWork';
 import BorderButton from "../../Buttons/BorderButton/borderButton";
-
+import ProgressiveImage from "../../imageUtil/useProgressiveImage";
 import './firstLayer.css';
 
 import I_o from './1_o.jpeg';
-import I1_ls_4pe3 from './1_ls_4pe3.jpeg';
+// import I1_ls_4pe3 from './1_ls_4pe3.jpeg';
 import I1_ls_16pe9 from './1_ls_16pe9.jpeg';
-import I1_ls_9pe5 from './1_ls_9pe5.jpg';
-import I1_ls_3pe2 from './1_ls_3pe2.jpg';
-
-import I1_pt_5pe9 from './1_pt_5pe9.jpeg';
-import I1_pt_4pe3 from './1_pt_4pe3.jpeg';
-import I1_pt_3pe2 from './1_pt_3pe2.jpeg';
+// import I1_ls_9pe5 from './1_ls_9pe5.jpg';
+// import I1_ls_3pe2 from './1_ls_3pe2.jpg';
+//
+// import I1_pt_5pe9 from './1_pt_5pe9.jpeg';
+// import I1_pt_4pe3 from './1_pt_4pe3.jpeg';
+// import I1_pt_3pe2 from './1_pt_3pe2.jpeg';
 import I1_pt_9pe16 from './1_pt_9pe16.jpg';
-import I1_pt_9pe18punct5 from './1_pt_9pe18.5.jpg';
-import I1_pt_9pe19punct5 from './1_pt_9pe19.5.jpg';
+// import I1_pt_9pe18punct5 from './1_pt_9pe18.5.jpg';
+// import I1_pt_9pe19punct5 from './1_pt_9pe19.5.jpg';
 
 class FirstLayer extends React.Component {
     constructor(props) {
@@ -55,6 +55,7 @@ class FirstLayer extends React.Component {
                     }
                 </div>
 
+
                 <picture className={"first-layer-picture"}>
                     {/*<source media="(orientation: portrait) and (min-aspect-ratio: 3/4)" srcSet={I1_pt_4pe3} />*/}
                     {/*<source media="(orientation: portrait) and (min-aspect-ratio: 2/3)" srcSet={I1_pt_3pe2} />*/}
@@ -70,7 +71,12 @@ class FirstLayer extends React.Component {
 
                     <source media="(orientation: landscape)" srcSet={I1_ls_16pe9} />
                     <source media="(orientation: portrait)" srcSet={I1_pt_9pe16} />
-                    <img className={"first-layer-photo"} src={I_o} alt={"Not found"} />
+
+                    <ProgressiveImage
+                        className={"first-layer-photo"}
+                        preview="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAS......"
+                        image={I_o}
+                    />
                 </picture>
             </div>
         );
